@@ -15,13 +15,13 @@ RUN cd /usr/local/bin && \
     ln -s /usr/bin/python3 python && \
     pip3 install --upgrade pip
 
-# cleanse
-RUN apt-get clean && \
-	rm -rf /var/lib/apt/lists/*
-
 # install konlpy
 RUN pip3 install jpype1-py3 konlpy
 RUN curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh | bash -s
+
+# cleanse
+RUN apt-get clean && \
+	rm -rf /var/lib/apt/lists/*
 
 # entry
 ENTRYPOINT ["python3"]
