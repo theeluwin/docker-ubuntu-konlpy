@@ -1,6 +1,10 @@
 # docker-ubuntu-konlpy
 Docker image of latest Ubuntu for KoNLPy on Python 3.
 
+```bash
+$ docker pull theeluwin/ubuntu-konlpy:latest
+```
+
 ## Build
 
 ```bash
