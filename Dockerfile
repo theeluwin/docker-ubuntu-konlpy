@@ -1,5 +1,3 @@
-# syntax=docker/dockerfile:experimental
-
 # from
 FROM ubuntu:latest
 LABEL maintainer="Jamie Seol <theeluwin@gmail.com>"
@@ -33,7 +31,7 @@ RUN mkdir -p /workspace
 WORKDIR /workspace
 
 # install python packages
-RUN --mount=type=cache,target=/root/.cache/pip pip install jpype1-py3 konlpy
+RUN pip install jpype1-py3 konlpy
 RUN cd /workspace && \
     curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh | bash -s
 
