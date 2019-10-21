@@ -7,10 +7,16 @@ Docker image of latest Ubuntu for KoNLPy on Python 3.
 $ docker build -t konlpy -f Dockerfile .
 ```
 
+or,
+
+```bash
+$ ./build.sh
+```
+
 ## Run
 
 ```bash
-$ docker run -i -t konlpy
+$ docker run --rm -it konlpy
 ```
 
 ```python
