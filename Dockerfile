@@ -10,7 +10,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends tzdata g++ git curl
 
 # java stuff
-RUN apt-get install -y default-jdk default-jre
+RUN apt-get install -y openjdk-8-jdk
 
 # python stuff
 RUN apt-get install -y python3-pip python3-dev
@@ -31,7 +31,7 @@ RUN mkdir -p /workspace
 WORKDIR /workspace
 
 # install python packages
-RUN pip install jpype1-py3 konlpy
+RUN pip install konlpy
 RUN cd /workspace && \
     curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh | bash -s
 
