@@ -1,26 +1,27 @@
 # docker-ubuntu-konlpy
-Docker image of latest Ubuntu for KoNLPy on Python 3.
+
+Docker image of latest Ubuntu for [KoNLPy](http://konlpy.org) on Python 3.
 
 ```bash
-$ docker pull theeluwin/ubuntu-konlpy:latest
+docker pull theeluwin/ubuntu-konlpy:latest
 ```
 
 ## Build
 
 ```bash
-$ docker build -t konlpy -f Dockerfile .
+docker build -t konlpy -f Dockerfile .
 ```
 
 or,
 
 ```bash
-$ ./build.sh
+./build.sh
 ```
 
 ## Run
 
 ```bash
-$ docker run --rm -it konlpy
+docker run --rm -it konlpy
 ```
 
 ```python
